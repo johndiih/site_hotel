@@ -33,7 +33,7 @@
     
 	<section class="content">
 		<div class="card"><a href="quartos.php">
-			<img src="img/bahia.png">
+			<img src="img/Bahia.png">
 			<h2>Bahia</h2>
 			<p>A Bahia é um estado localizado no nordeste do Brasil, conhecido por sua rica cultura, belas praias, gastronomia saborosa e influências africanas. Com uma história profunda e diversa, a Bahia é um verdadeiro tesouro cultural do país.</p>
 		</a></div>
@@ -53,7 +53,7 @@
 			<p>O Rio de Janeiro é uma cidade icônica e deslumbrante, localizada na região sudeste do Brasil. Conhecida como a "Cidade Maravilhosa", o Rio é famoso por suas belas praias, paisagens deslumbrantes, festas animadas, cultura vibrante e seu estilo de vida descontraído.</p>
 		</a></div>
 		<div class="card"><a href="quartos.php">
-			<img src="img/Gramado.png">
+			<img src="img/gramado.png">
 			<h2>Gramado</h2>
 			<p>Gramado é uma encantadora cidade localizada no estado do Rio Grande do Sul, na região sul do Brasil. Conhecida por sua arquitetura europeia, clima ameno, paisagens exuberantes e eventos culturais, Gramado é um destino turístico popular e encanta visitantes de todo o país.</p>
 		</a></div>

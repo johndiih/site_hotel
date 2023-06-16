@@ -61,7 +61,7 @@
 <body>
     <?php
     // Arquivo de conexão com o banco de dados
-    require('conexao.php');
+    require_once 'conexao.php';
 
     // Verifica se o ID do hotel foi fornecido
     if (isset($_GET['id'])) {
