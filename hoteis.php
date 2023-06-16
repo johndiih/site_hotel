@@ -201,9 +201,6 @@
         <label for="descricao">Descrição:</label>
         <textarea id="descricao" name="descricao" required></textarea><br><br>
 
-        <label for="imagem">Imagem:</label>
-        <input type="file" id="imagem" name="imagem" required><br><br>
-
         <input type="submit" name="adicionar" value="Adicionar Hotel">
     </form>
 
