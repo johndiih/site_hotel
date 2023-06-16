@@ -139,24 +139,25 @@
     // Arquivo de conexão com o banco de dados
     require_once 'conexao.php';
 
+    // Verifica se o formulário de adição foi submetido
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar'])) {
         // Obtém os dados do formulário
         $nome = $_POST['nome'];
         $endereco = $_POST['endereco'];
         $descricao = $_POST['descricao'];
-    
-        // Insere os dados do hotel no banco de dados
-        $sql = "INSERT INTO hoteis (nome, endereco, descricao) VALUES (?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $nome, $endereco, $descricao);
-    
-        if ($stmt->execute()) {
-            echo "Hotel adicionado com sucesso.";
-        } else {
-            echo "Erro ao adicionar hotel: " . $stmt->error;
-        }
-    
-        $stmt->close();
+
+            // Insere o hotel e a imagem no banco de dados
+            $sql = "INSERT INTO hoteis (nome, endereco, descricao) VALUES (?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("sssb", $nome, $endereco, $descricao);
+
+            if ($stmt->execute()) {
+                echo "Hotel adicionado com sucesso.";
+            } else {
+                echo "Erro ao adicionar hotel: " . $stmt->error;
+            }
+
+            $stmt->close();
     }
 
     // Verifica se o formulário de edição/exclusão foi submetido
