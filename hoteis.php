@@ -146,15 +146,12 @@
         $endereco = $_POST['endereco'];
         $descricao = $_POST['descricao'];
 
-        // Verifica se uma imagem foi enviada
-        if (isset($_FILES['imagem'])) {
-            $imagem = $_FILES['imagem']['tmp_name'];
-            $imagemConteudo = file_get_contents($imagem);
+        
 
             // Insere o hotel e a imagem no banco de dados
-            $sql = "INSERT INTO hoteis (nome, endereco, descricao, imagem) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO hoteis (nome, endereco, descricao ) VALUES (?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssb", $nome, $endereco, $descricao, $imagemConteudo);
+            $stmt->bind_param("sssb", $nome, $endereco, $descricao,);
 
             if ($stmt->execute()) {
                 echo "Hotel adicionado com sucesso.";
@@ -163,9 +160,7 @@
             }
 
             $stmt->close();
-        } else {
-            echo "Erro: nenhuma imagem enviada.";
-        }
+        
     }
 
     // Verifica se o formulário de edição/exclusão foi submetido
@@ -201,8 +196,7 @@
         <label for="descricao">Descrição:</label>
         <textarea id="descricao" name="descricao" required></textarea><br><br>
 
-        <label for="imagem">Imagem:</label>
-        <input type="file" id="imagem" name="imagem" required><br><br>
+        
 
         <input type="submit" name="adicionar" value="Adicionar Hotel">
     </form>
