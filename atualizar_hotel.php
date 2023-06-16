@@ -13,7 +13,7 @@
 <body>
     <?php
     // Arquivo de conexão com o banco de dados
-    require_once 'conexao.php';
+    require('conexao.php');
 
     // Verifica se o formulário de atualização foi submetido
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['atualizar'])) {
